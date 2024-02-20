@@ -1,0 +1,16 @@
+﻿	0. У Вас точно есть 50 свободных гигабайт памяти?
+	1. Установка необходимых пакетов. Команда: 
+sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 xterm python3-subunit mesa-common-dev zstd liblz4-tool
+	2. Клонирование репозитория Poky. Команда:
+git clone git://git.yoctoproject.org/poky
+	3. Переход к ветке с нужной версией (Kirkstone):
+cd poky && git checkout -t origin/kirkstone -b my-kirkstone
+	4. Определение окружения для сборки. Команда:
+cd poky && source oe-init-build-env
+	5. Начало сборки:
+bitbake core-image-minimal
+	6. Запуск образа ОС в эмуляторе:
+runqemu qemux86-64
+
+
+
